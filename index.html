@@ -370,13 +370,13 @@ body {
 </section>
 
 <section>
-<section id="slide-org9e21532">
-<h2 id="org9e21532">Motivation</h2>
+<section id="slide-orgc89b045">
+<h2 id="orgc89b045">Motivation</h2>
 </section>
 </section>
 <section>
-<section id="slide-org9bd7fc0">
-<h2 id="org9bd7fc0">Why do we need this?</h2>
+<section id="slide-orga3e5d81">
+<h2 id="orga3e5d81">Why do we need this?</h2>
 <ul>
 <li>Linux is one of the most well known piece of open source software</li>
 <li>Not every Linux-based device is open</li>
@@ -384,8 +384,8 @@ body {
 
 </ul>
 </section>
-<section id="slide-orgf64bb27">
-<h3 id="orgf64bb27">Embedded devices</h3>
+<section id="slide-orgffb0b5f">
+<h3 id="orgffb0b5f">Embedded devices</h3>
 <ul>
 <li>Often run 5-8 years old software</li>
 <li>Updates are few and far between</li>
@@ -393,7 +393,7 @@ body {
 
 </ul>
 
-<div id="orgfedd7a9" class="figure">
+<div id="org757399f" class="figure">
 <p><img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
 HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
 MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCAJxAwADAREA
@@ -1004,21 +1004,10 @@ Zs9HB0HPqOkNRjqHR56Gc/E7dHM4Y6nCb9A4nePENPW/cf4C26bRymj7nJPtkNHQ/wAP/9k=" width=
 </p>
 </div>
 </section>
-<section id="slide-org9d9a30e">
-<h3 id="org9d9a30e">Scale of the issue</h3>
-<ul>
-<li>In 2020 there were an estimated 10 connected devices per household</li>
-<li>IoT devices are attacked just 5 minutes after connecting to the internet</li>
-<li>75% of attacks target routers</li>
-<li>48% of businesses admit that they can&rsquo;t detect IoT security breaches</li>
-
-</ul>
-<div class="slide-footer"><a href="https://findstack.com/internet-of-things-statistics">source</a></div>
-</section>
 </section>
 <section>
-<section id="slide-orgd29ef5d">
-<h2 id="orgd29ef5d">IoT security testing</h2>
+<section id="slide-org89d7be2">
+<h2 id="org89d7be2">IoT security testing</h2>
 <ul>
 <li>The best-case scenario is using real hardware</li>
 <li>Not practical
@@ -1031,8 +1020,8 @@ Zs9HB0HPqOkNRjqHR56Gc/E7dHM4Y6nCb9A4nePENPW/cf4C26bRymj7nJPtkNHQ/wAP/9k=" width=
 
 </ul>
 </section>
-<section id="slide-org253c4c6">
-<h3 id="org253c4c6">Emulation</h3>
+<section id="slide-orgafb6f95">
+<h3 id="orgafb6f95">Emulation</h3>
 <ul>
 <li>A device&rsquo;s software can be ran on virtual hardware (in theory)</li>
 <li>Specialized devices have special hardware</li>
@@ -1040,8 +1029,8 @@ Zs9HB0HPqOkNRjqHR56Gc/E7dHM4Y6nCb9A4nePENPW/cf4C26bRymj7nJPtkNHQ/wAP/9k=" width=
 
 </ul>
 </section>
-<section id="slide-org4fba17a">
-<h3 id="org4fba17a">What can be done?</h3>
+<section id="slide-orgdd93972">
+<h3 id="orgdd93972">What can be done?</h3>
 <ul>
 <li>Firmware can be downloaded and analysed without running it</li>
 <li>The Linux kernel powering these devices can be substituted</li>
@@ -1052,8 +1041,8 @@ Zs9HB0HPqOkNRjqHR56Gc/E7dHM4Y6nCb9A4nePENPW/cf4C26bRymj7nJPtkNHQ/wAP/9k=" width=
 </section>
 </section>
 <section>
-<section id="slide-org8ca7741">
-<h2 id="org8ca7741">Linux build system</h2>
+<section id="slide-org5e6d72d">
+<h2 id="org5e6d72d">Linux build system</h2>
 <ul>
 <li>Linux is built using a configuration file.</li>
 <li>Same source + same configuration = same kernel</li>
@@ -1061,8 +1050,8 @@ Zs9HB0HPqOkNRjqHR56Gc/E7dHM4Y6nCb9A4nePENPW/cf4C26bRymj7nJPtkNHQ/wAP/9k=" width=
 
 </ul>
 </section>
-<section id="slide-orgda8a9c9">
-<h3 id="orgda8a9c9">Configuration file</h3>
+<section id="slide-orga3ee0b9">
+<h3 id="orga3ee0b9">Configuration file</h3>
 <ul>
 <li>usually <code>.config</code></li>
 <li>Its structure is as follows</li>
@@ -1079,13 +1068,13 @@ CONFIG_TRISTATE_OPTION=m
 
 </ul>
 </section>
-<section id="slide-org293ba78">
-<h3 id="org293ba78">Kconfig file</h3>
+<section id="slide-orgf241f54">
+<h3 id="orgf241f54">Kconfig file</h3>
 <ul>
 <li>Multiple ones across the source files of Linux</li>
 
 </ul>
-<pre class="example" id="org7b350ba">
+<pre class="example" id="org67c63e1">
 ➜ fd Kconfig
 virt/kvm/Kconfig
 sound/Kconfig
@@ -1098,9 +1087,9 @@ sound/parisc/Kconfig
 ...
 </pre>
 </section>
-<section id="slide-org7323ea5">
-<h4 id="org7323ea5"><code>Kconfig</code> structure</h4>
-<pre class="example" id="org1fb6db9">
+<section id="slide-org6162bcb">
+<h4 id="org6162bcb"><code>Kconfig</code> structure</h4>
+<pre class="example" id="org529ce8c">
 ➜ cat virt/kvm/Kconfig
 ...
 config KVM_GENERIC_DIRTYLOG_READ_PROTECT
@@ -1118,8 +1107,8 @@ config KVM_COMPAT
 
 </ul>
 </section>
-<section id="slide-org4facc4a">
-<h4 id="org4facc4a">Some <code>Kconfig</code> fields</h4>
+<section id="slide-orgd39a4e5">
+<h4 id="orgd39a4e5">Some <code>Kconfig</code> fields</h4>
 <ul>
 <li><code>config</code>
 <ul>
@@ -1138,6 +1127,11 @@ config KVM_COMPAT
 <li>usually contains multiple fields. (config, if, menu etc.)</li>
 
 </ul></li>
+
+</ul>
+</section>
+<section>
+<ul>
 <li><code>menu</code>
 <ul>
 <li>describes a submenu to help the menu structure, has no use when parsing into a data structure</li>
@@ -1148,24 +1142,24 @@ config KVM_COMPAT
 <li>loads an other <code>Kconfig</code> in its place</li>
 
 </ul></li>
-
-</ul>
-</section>
-<section>
+<li><code>menuconfig</code>
 <ul>
-<li><code>menuconfig</code> is a menu and a config baked into one field, has no end symbol unlike menu.</li>
+<li>a menu and a config baked into one fields</li>
+<li>has no end symbol unlike menu.</li>
+
+</ul></li>
 
 </ul>
 </section>
-<section id="slide-orgacd9062">
-<h4 id="orgacd9062">Parser</h4>
+<section id="slide-org41bb715">
+<h4 id="org41bb715">Parser</h4>
 <ul>
 <li>implemented a basic <code>Kconfig</code> parser to extract all the available options from a kernel source</li>
 <li><p>
 published as a Rust crate
 </p>
 
-<div id="org79d768e" class="figure">
+<div id="org6434a16" class="figure">
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+0AAADmCAYAAACgaGRNAAAABHNCSVQICAgIfAhkiAAAIABJREFU
 eJzs3Xd8VeX9wPHP85y7VwYJkATClA0CgoCIuMVZFVcdtY4621o77HbWttbVqj9Hq7ZaRVERNwou
 VBQVAZElKySB7H2TO885z++Pe3MJGKZUgj7v1yskN5x77nNObk7O9/k+z/cRixcvVmiapmmapmma
@@ -1767,8 +1761,8 @@ m3qXzQ4AAAAASUVORK5CYII=" width="50%" style="display:block; margin-left: auto; m
 
 </ul>
 </section>
-<section id="slide-orga17382b">
-<h4 id="orga17382b">Parser algorithm</h4>
+<section id="slide-org940804e">
+<h4 id="org940804e">Parser algorithm</h4>
 <pre class="example">
 ...
 config ACPI_CONFIGFS
@@ -1790,8 +1784,8 @@ endif
 </section>
 </section>
 <section>
-<section id="slide-org49fcbf6">
-<h2 id="org49fcbf6">Building older Linux kernels for other architectures</h2>
+<section id="slide-orgd25da5f">
+<h2 id="orgd25da5f">Building older Linux kernels for other architectures</h2>
 <ul>
 <li>IoT devices are rarely based on the desktop standard x86 architecture</li>
 <li>Cross compilation is needed in most cases</li>
@@ -1807,8 +1801,8 @@ endif
 
 </ul>
 </section>
-<section id="slide-org6dcb4f2">
-<h3 id="org6dcb4f2">Vanilla cross compilation</h3>
+<section id="slide-orge707d03">
+<h3 id="orge707d03">Vanilla cross compilation</h3>
 <ul>
 <li>Usually every Linux distribution ships a cross compiler</li>
 <li>Linux distributions only support newer GCC versions</li>
@@ -1816,8 +1810,8 @@ endif
 
 </ul>
 </section>
-<section id="slide-org9d53e68">
-<h3 id="org9d53e68">Docker containers and VMs</h3>
+<section id="slide-org3edc461">
+<h3 id="org3edc461">Docker containers and VMs</h3>
 <ul>
 <li>Create an isolated light-weight environment that has the correct version of GCC</li>
 <li>Older docker images often have trouble with dead repositories</li>
@@ -1829,8 +1823,8 @@ endif
 
 </ul>
 </section>
-<section id="slide-org644cc72">
-<h3 id="org644cc72">Buildroot</h3>
+<section id="slide-org357eb3c">
+<h3 id="org357eb3c">Buildroot</h3>
 <ul>
 <li>It is a complete toolbox to build embedded system images</li>
 <li>Configuration is similar to the Linux kernel</li>
@@ -1842,13 +1836,13 @@ endif
 </section>
 </section>
 <section>
-<section id="slide-org85d85bc">
-<h2 id="org85d85bc">My tools</h2>
-<div class="outline-text-2" id="text-org85d85bc">
+<section id="slide-orgf211085">
+<h2 id="orgf211085">My tools</h2>
+<div class="outline-text-2" id="text-orgf211085">
 </div>
 </section>
-<section id="slide-org58eaadd">
-<h3 id="org58eaadd">Kernel choice</h3>
+<section id="slide-org8cd8016">
+<h3 id="org8cd8016">Kernel choice</h3>
 <ul>
 <li>OpenWRT so I can test multiple initial configurations</li>
 <li><code>armvirt-32</code> as the architecture</li>
@@ -1860,13 +1854,13 @@ endif
 </section>
 </section>
 <section>
-<section id="slide-orgcb2e72f">
-<h2 id="orgcb2e72f"><code>stringhunter</code></h2>
-<div class="outline-text-2" id="text-orgcb2e72f">
+<section id="slide-orge9d2a21">
+<h2 id="orge9d2a21"><code>stringhunter</code></h2>
+<div class="outline-text-2" id="text-orge9d2a21">
 </div>
 </section>
-<section id="slide-orgdab37b5">
-<h3 id="orgdab37b5">V1</h3>
+<section id="slide-org79241ee">
+<h3 id="org79241ee">V1</h3>
 <ul>
 <li>Written in python</li>
 <li>Only one option per run</li>
@@ -1882,8 +1876,8 @@ endif
 
 </ul>
 </section>
-<section id="slide-orgf69327d">
-<h3 id="orgf69327d">V2</h3>
+<section id="slide-org596d98c">
+<h3 id="org596d98c">V2</h3>
 <ul>
 <li>Written in Rust</li>
 <li>Utilizes <code>kconfig-linux</code> crate</li>
@@ -1941,8 +1935,8 @@ endif
 </pre>
 </div>
 </section>
-<section id="slide-orgf6a9956">
-<h4 id="orgf6a9956">output</h4>
+<section id="slide-org90ff289">
+<h4 id="org90ff289">output</h4>
 <div class="org-src-container">
 
 <pre class="src src-json">[
@@ -1959,8 +1953,8 @@ endif
 </section>
 </section>
 <section>
-<section id="slide-org48f8aea">
-<h2 id="org48f8aea">Python tools</h2>
+<section id="slide-org86f7fe2">
+<h2 id="org86f7fe2">Python tools</h2>
 <ul>
 <li>other tools have been written in python/go for rapid development</li>
 <li>python is a well known language</li>
@@ -1968,9 +1962,9 @@ endif
 
 </ul>
 </section>
-<section id="slide-org906de37">
-<h3 id="org906de37"><code>find_strings</code></h3>
-<pre class="example" id="org37dde7c">
+<section id="slide-orgac3013a">
+<h3 id="orgac3013a"><code>find_strings</code></h3>
+<pre class="example" id="orga401e81">
 usage: find_strings.py [-h] [-o OUTPUT] INPUT
 
 Extracting strings from stringhunter's JSON output.
@@ -2004,9 +1998,9 @@ options:
 </pre>
 </div>
 </section>
-<section id="slide-orgc846e4e">
-<h3 id="orgc846e4e"><code>dedup_strings</code></h3>
-<pre class="example" id="org88c9f89">
+<section id="slide-org76f8e36">
+<h3 id="org76f8e36"><code>dedup_strings</code></h3>
+<pre class="example" id="orge432dcd">
 usage: dedup_strings.py [-h] [-o OUTPUT] INPUT
 
 Remove duplicate strings from strings.json
@@ -2039,8 +2033,8 @@ options:
 </pre>
 </div>
 </section>
-<section id="slide-org86e3213">
-<h3 id="org86e3213"><code>ink-checker</code></h3>
+<section id="slide-org62a2df9">
+<h3 id="org62a2df9"><code>ink-checker</code></h3>
 <ul>
 <li>in-kernel-checker: checks if an option&rsquo;s strings are present in a binary</li>
 <li>reads the characters found in the kernel binary into a string</li>
@@ -2051,18 +2045,29 @@ options:
 </section>
 </section>
 <section>
-<section id="slide-org3152d5b">
-<h2 id="org3152d5b">Test results</h2>
+<section id="slide-orga04b02b">
+<h2 id="orga04b02b">Test results</h2>
+<ul>
+<li>Initially there are only 6 hits compared to the original config used by openwrt</li>
+<li>Fixing dependencies using menuconfig bumps this up to 75.</li>
+<li>Running the through the same dependency checks makes this number 532 out of 823.</li>
+
+</ul>
 </section>
 </section>
 <section>
-<section id="slide-orgd570f8e">
-<h2 id="orgd570f8e">Improvements</h2>
+<section id="slide-org24453c1">
+<h2 id="org24453c1">Improvements</h2>
+<ul>
+<li>There are many configuration options that don&rsquo;t leave any strings in the kernel.</li>
+<li>These will need help from AI to guess.</li>
+
+</ul>
 </section>
 </section>
 <section>
-<section id="slide-orgcd24e18">
-<h2 id="orgcd24e18">Thanks</h2>
+<section id="slide-org4f69587">
+<h2 id="org4f69587">Thank you for your audience</h2>
 </section>
 </section>
 </div>
